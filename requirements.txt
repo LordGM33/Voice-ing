@@ -1,0 +1,16 @@
+# Sistema basico (Capitulos 2 a 8; corre sin GPU)
+numpy
+scipy
+librosa
+soundfile
+num2words
+jiwer
+faster-whisper
+
+# Motor de sintesis (Capitulo 9+; requiere GPU, ver el libro)
+# torch
+# qwen-tts
+
+# Opcional (Taller 4.2, similitud de hablante)
+# speechbrain
+# torchaudio
