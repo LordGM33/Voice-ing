@@ -1,0 +1,11 @@
+# Las grabaciones son de cada lector y la voz es un dato biometrico:
+# no se suben al repositorio.
+samples/*
+!samples/LEEME.md
+
+# Todo lo que generan los scripts
+outputs/*
+!outputs/LEEME.md
+
+__pycache__/
+*.pyc
