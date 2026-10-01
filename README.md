@@ -1,6 +1,6 @@
 # Voice-ing
 
-Scripts del taller del libro **Ingeniería de voz para avatares IA autónomos**
+Scripts del taller del libro **Diseño y construcción de sistemas de audio para IA**
 (serie *Desarrollo de Avatares IA Autónomos*, libro 1).
 
 Cada script es **independiente**: podés descargar uno solo y funciona. También

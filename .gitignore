@@ -9,3 +9,6 @@ outputs/*
 
 __pycache__/
 *.pyc
+
+# Permisos locales de Claude Code: son de la maquina, no del taller
+.claude/settings.local.json
