@@ -19,10 +19,10 @@ OUTPUTS = BASE / "outputs"
 SAMPLES.mkdir(exist_ok=True)
 OUTPUTS.mkdir(exist_ok=True)
 
-# criterios de aceptacion
-SNR_MINIMO = 25.0        # dB de margen sobre el ruido de fondo
-DUR_MINIMA = 6.0         # segundos
-DUR_MAXIMA = 30.0        # mas largo no aporta y complica el recorte
+# criterios de aceptacion, los del libro (taller 4.4) y la serie (episodio 13)
+SNR_MINIMO = 30.0        # dB de margen sobre el ruido de fondo
+DUR_MINIMA = 8.0         # segundos por tramo
+DUR_MAXIMA = 25.0        # mas largo no aporta y complica el recorte
 
 
 def analizar(ruta):
@@ -37,15 +37,22 @@ def analizar(ruta):
     n = len(x) // w
     e = np.sqrt(np.mean(x[:n * w].reshape(n, w) ** 2, axis=1)) if n else np.array([1e-9])
     snr = 20 * np.log10(np.percentile(e, 90) / (np.percentile(e, 5) + 1e-12))
+    # con silencio digital (ceros exactos, tipico del audio sintetizado) el percentil 5
+    # es cero y el SNR sale disparado: correcto y sin significado. Pensado para microfono.
+    silencio_digital = bool(np.percentile(e, 5) == 0)
 
     f0, _, _ = librosa.pyin(x, fmin=60, fmax=350, sr=sr)
     f0v = f0[~np.isnan(f0)]
     varst = float(np.std(12 * np.log2(f0v / np.median(f0v)))) if len(f0v) > 10 else 0.0
 
+    # recorte y ruido son dos ejes independientes: una toma saturada puede dar un SNR
+    # altisimo con un cuarto de las muestras destrozadas, por eso se miran los dos
     problemas = []
     if recorte > 0:
         problemas.append("recorte digital")
-    if snr < SNR_MINIMO:
+    if silencio_digital:
+        problemas.append("silencio digital: SNR no aplica (es audio de microfono?)")
+    elif snr < SNR_MINIMO:
         problemas.append(f"ruido alto ({snr:.0f} dB)")
     if dur < DUR_MINIMA:
         problemas.append(f"muy corto ({dur:.1f} s)")
@@ -76,8 +83,9 @@ def main():
     validos = [f for f in filas if f["sirve"]]
     print()
     if not validos:
-        print("Ninguna grabacion pasa el control. Lo mas comun es ruido de fondo:")
-        print("apaga ventiladores, cierra ventanas y repite la toma.")
+        print("Ninguna grabacion pasa el control. Mira la columna de estado.")
+        print("Si es ruido, lo mas comun: apaga ventiladores, cierra ventanas y repite la toma.")
+        print("Si es silencio digital, ese audio no salio de un microfono: este control no aplica.")
         return
 
     mejor = max(validos, key=lambda f: f["varst"])

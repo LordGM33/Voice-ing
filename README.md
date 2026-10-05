@@ -43,7 +43,10 @@ para que puedas probarlos igual.
 | `cap04_calidad_fuente.py` | 4 | Jitter, shimmer y HNR: la micro-imperfección | base |
 | `cap04_qa_grabacion.py` | 4 | Revisa todas tus grabaciones y elige candidata | base |
 | `cap04_perfil_vocal.py` | 4 | Registra tus referencias en `perfiles.json` | base |
+| `cap04_misma_voz.py` | 4 | ¿Son la misma voz? MFCC y coseno, bien y mal hecho (serie, ep. 16 y 17) | base |
 | `cap05_prosodia.py` | 5 | Repara puntuación, revisa tildes y decide segmentación | solo stdlib |
+| `cap05_entonacion.py` | 5 | Cuánto se mueve tu voz, en semitonos, y la alarma de voz plana con tu umbral (serie, ep. 19 y 24) | base |
+| `cap06_cadena.py` | 6 | Una cadena de voz con contratos y un motor de mentira que corre en cualquier portátil (serie, ep. 26 a 31) | solo numpy |
 | `cap07_wer.py` | 7 | WER round-trip: la métrica que decide | ASR |
 | `cap09_normalizacion.py` | 9 | Normaliza números, horas, dominios y etiquetas | num2words |
 | `cap09_sintetizar.py` | 9 | Sintetiza con tu voz clonada | GPU y motor |
@@ -62,6 +65,26 @@ Para sintetizar: ver el Capítulo 8 del libro, que explica por qué el motor va 
 su propio entorno virtual.
 
 O de una vez: `pip install -r requirements.txt`
+
+## La serie «Construye tu voz de IA»
+
+Los scripts marcados «serie» son el código que se enseña en pantalla en la serie diaria
+de vídeos que sigue el libro capítulo a capítulo (Instagram, Facebook y TikTok). Cada
+línea que sale en un vídeo se ejecutó tal cual antes de publicarse.
+
+## Correcciones
+
+Cuando una medición nueva contradice algo, se corrige aquí y se dice:
+
+- **5-oct-2026 · `cap04_qa_grabacion.py`**: pedía 25 dB de relación señal-ruido y tramos
+  de 6 a 30 s; ahora pide lo que dice el libro, más de 30 dB y de 8 a 25 s. Y avisa
+  cuando el audio tiene silencio digital (ceros exactos, típico del audio sintetizado):
+  ahí el SNR sale altísimo y no significa nada. Recorte y ruido se miran por separado.
+- **5-oct-2026 · `cap04_calidad_fuente.py`**: los rangos clínicos del jitter son para
+  una vocal sostenida, no para una lectura; el script ya no los presenta como referencia
+  para cualquier grabación.
+- **5-oct-2026 · coseno sobre MFCC**: la media de los 20 coeficientes no mide identidad,
+  mide volumen (el coeficiente 0). `cap04_misma_voz.py` enseña las dos formas.
 
 ## Nota sobre las mediciones
 
