@@ -11,6 +11,7 @@ Uso:  python cap06_cadena.py "tu texto aqui"
 """
 import re
 import sys
+import time
 import wave
 from abc import ABC, abstractmethod
 from dataclasses import FrozenInstanceError, dataclass, field
@@ -95,11 +96,16 @@ def main():
     segmentos = planificar(texto)
     motor = MotorDePitidos()       # para probar, sin tarjeta grafica
     # motor = MotorQwen()          # el de verdad: un adaptador mas del mismo puerto
+    t0 = time.perf_counter()
     audio = postproceso(motor.sintetizar(segmentos, perfil))
+    # episodio 33: segundos de computo por segundo de audio; por debajo de 1, mas rapido que tiempo real
+    rtf = (time.perf_counter() - t0) / (len(audio.muestras) / audio.sr)
 
     palabras = len(texto.split())
     print(f"{len(segmentos)} segmento(s), {palabras} palabra(s) -> "
           f"{len(audio.muestras) / audio.sr:.2f} s de pitidos a {audio.sr} Hz")
+    print(f"factor de tiempo real {rtf:.5f}: diminuto, porque no hace casi nada. "
+          "Mide el de tu motor de verdad.")
     try:
         segmentos[0].texto = "otra cosa"
     except FrozenInstanceError:

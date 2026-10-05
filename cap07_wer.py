@@ -29,8 +29,13 @@ def normalizar(s):
 
 
 def wer(referencia, hipotesis):
-    """Distancia de edicion por palabras, dividida entre las palabras esperadas."""
+    """Errores por palabra: distancia de edicion entre las palabras esperadas."""
     r, h = normalizar(referencia).split(), normalizar(hipotesis).split()
+    return distancia(r, h) / max(1, len(r))
+
+
+def distancia(r, h):
+    """Palabras cambiadas, que faltan y que sobran: el minimo de las tres que convierte r en h."""
     d = [[0] * (len(h) + 1) for _ in range(len(r) + 1)]
     for i in range(len(r) + 1):
         d[i][0] = i
@@ -40,7 +45,7 @@ def wer(referencia, hipotesis):
         for j in range(1, len(h) + 1):
             coste = 0 if r[i - 1] == h[j - 1] else 1
             d[i][j] = min(d[i - 1][j] + 1, d[i][j - 1] + 1, d[i - 1][j - 1] + coste)
-    return d[len(r)][len(h)] / max(1, len(r))
+    return d[len(r)][len(h)]
 
 
 def main():

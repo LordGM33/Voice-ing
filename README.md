@@ -46,8 +46,12 @@ para que puedas probarlos igual.
 | `cap04_misma_voz.py` | 4 | ¿Son la misma voz? MFCC y coseno, bien y mal hecho (serie, ep. 16 y 17) | base |
 | `cap05_prosodia.py` | 5 | Repara puntuación, revisa tildes y decide segmentación | solo stdlib |
 | `cap05_entonacion.py` | 5 | Cuánto se mueve tu voz, en semitonos, y la alarma de voz plana con tu umbral (serie, ep. 19 y 24) | base |
-| `cap06_cadena.py` | 6 | Una cadena de voz con contratos y un motor de mentira que corre en cualquier portátil (serie, ep. 26 a 31) | solo numpy |
+| `cap06_cadena.py` | 6 | Una cadena de voz con contratos y un motor de mentira que corre en cualquier portátil; mide su factor de tiempo real (serie, ep. 26 a 31 y 33) | solo numpy |
 | `cap07_wer.py` | 7 | WER round-trip: la métrica que decide | ASR |
+| `cap07_de_quien_es.py` | 7 | Separa los errores del WER: tildes, cifras y guiones (del instrumento) y lo que hay que escuchar (serie, ep. 34 y 35) | ASR |
+| `cap07_frases_de_prueba.py` | 7 | Tus ocho frases fijas con versión, y dos motores comparados por la media (serie, ep. 36 y 37) | ASR para comparar |
+| `cap07_contra_la_persona.py` | 7 | Tu voz clonada contra tu grabación: qué se aleja más de un 20 % (serie, ep. 38) | base |
+| `cap07_una_muestra.py` | 7 | Varias muestras por configuración: ¿la diferencia es mayor que el azar? (serie, ep. 39) | base |
 | `cap09_normalizacion.py` | 9 | Normaliza números, horas, dominios y etiquetas | num2words |
 | `cap09_sintetizar.py` | 9 | Sintetiza con tu voz clonada | GPU y motor |
 
