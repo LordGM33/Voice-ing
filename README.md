@@ -52,6 +52,9 @@ para que puedas probarlos igual.
 | `cap07_frases_de_prueba.py` | 7 | Tus ocho frases fijas con versión, y dos motores comparados por la media (serie, ep. 36 y 37) | ASR para comparar |
 | `cap07_contra_la_persona.py` | 7 | Tu voz clonada contra tu grabación: qué se aleja más de un 20 % (serie, ep. 38) | base |
 | `cap07_una_muestra.py` | 7 | Varias muestras por configuración: ¿la diferencia es mayor que el azar? (serie, ep. 39) | base |
+| `cap08_contrato_audio.py` | 8 | El contrato de audio: tus audios a 24 000 Hz, un canal y pico a -1 dB; y oír el error de leer a otra frecuencia (serie, ep. 41 y 42) | base |
+| `cap08_que_python.py` | 8 | Qué Python usas, qué le falta y sus versiones apuntadas; y pedirle trabajo a otro Python (serie, ep. 43 y 44) | solo stdlib |
+| `cap08_telemetria.py` | 8 | Mide cada etapa con percentiles, no con medias (serie, ep. 46) | numpy |
 | `cap09_normalizacion.py` | 9 | Normaliza números, horas, dominios y etiquetas | num2words |
 | `cap09_sintetizar.py` | 9 | Sintetiza con tu voz clonada | GPU y motor |
 
