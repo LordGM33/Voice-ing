@@ -98,7 +98,6 @@ def main():
     prompt = modelo.create_voice_clone_prompt(
         ref_audio=str(ref_wav), ref_text=referencia_texto, x_vector_only_mode=False)
 
-    objetivo = var_st(*sf.read(ref_wav)[::-1][::-1]) if False else None
     xr, srr = sf.read(ref_wav)
     objetivo = var_st(xr if xr.ndim == 1 else xr.mean(axis=1), srr)
 

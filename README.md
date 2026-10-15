@@ -55,8 +55,11 @@ para que puedas probarlos igual.
 | `cap08_contrato_audio.py` | 8 | El contrato de audio: tus audios a 24 000 Hz, un canal y pico a -1 dB; y oír el error de leer a otra frecuencia (serie, ep. 41 y 42) | base |
 | `cap08_que_python.py` | 8 | Qué Python usas, qué le falta y sus versiones apuntadas; y pedirle trabajo a otro Python (serie, ep. 43 y 44) | solo stdlib |
 | `cap08_telemetria.py` | 8 | Mide cada etapa con percentiles, no con medias (serie, ep. 46) | numpy |
-| `cap09_normalizacion.py` | 9 | Normaliza números, horas, dominios y etiquetas | num2words |
-| `cap09_sintetizar.py` | 9 | Sintetiza con tu voz clonada | GPU y motor |
+| `cap09_elegir_motor.py` | 9 | Las seis preguntas para elegir motor (y cuáles no has contestado), la licencia de cada librería de tu entorno y qué versión del modelo descargaste (serie, ep. 47 a 49) | solo stdlib |
+| `cap09_texto_limpio.py` | 9 | Antes de sintetizar: acotaciones que el motor leería, tildes perdidas, voseo sin tilde y signos de apertura (serie, ep. 50) | solo stdlib |
+| `cap09_normalizacion.py` | 9 | Normaliza números, decimales, horas, dominios y etiquetas, y avisa de lo que no sabe decir (serie, ep. 51) | num2words |
+| `cap09_sintetizar.py` | 9 | Sintetiza con tu voz clonada: el adaptador (serie, ep. 52) | GPU y motor |
+| `cap09_perillas.py` | 9 | Una perilla del motor contra los valores de fábrica, por el reparto de varias tomas (serie, ep. 53) | GPU y motor |
 
 ## Instalación
 
@@ -92,6 +95,12 @@ Cuando una medición nueva contradice algo, se corrige aquí y se dice:
   para cualquier grabación.
 - **5-oct-2026 · coseno sobre MFCC**: la media de los 20 coeficientes no mide identidad,
   mide volumen (el coeficiente 0). `cap04_misma_voz.py` enseña las dos formas.
+
+- **15-oct-2026 · `cap09_normalizacion.py`**: no trataba los decimales. «2.4» salía «dos.cuatro»
+  y «2.5 %», «dos por ciento». Ahora dice «dos punto cuatro» y «dos punto cinco por ciento», y al
+  final lista lo que no sabe decir (un usuario con guion bajo, por ejemplo) para que lo escribas a
+  mano. Y `num2words`, que usa este script, tiene licencia LGPL: sin problema para practicar; si
+  lo metes en algo que vas a distribuir, lee lo que pide (serie, ep. 48).
 
 ## Nota sobre las mediciones
 

@@ -9,10 +9,10 @@ matplotlib
 # WER round-trip (cap07_wer.py)
 faster-whisper
 
-# Normalizacion de texto (cap09_normalizacion.py)
+# Normalizacion de texto (cap09_normalizacion.py). Licencia LGPL: ver la seccion Correcciones del README.
 num2words
 
-# Sintesis con clonacion (cap09_sintetizar.py). Requiere GPU.
+# Sintesis con clonacion (cap09_sintetizar.py y cap09_perillas.py). Requiere GPU.
 # Ver el Capitulo 8: conviene instalarlo en un entorno virtual aparte.
 # torch
 # qwen-tts
