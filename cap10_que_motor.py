@@ -48,7 +48,8 @@ def informe(cfg):
         print(f"familia: esquema clasico (mel de {mel} bandas y vocoder)")
     elif buscar(cfg, "tokenizer_type"):
         # El modelo principal de Qwen3-TTS solo nombra su codec; los numeros estan en la carpeta de este.
-        print(f"usa el codec '{buscar(cfg, "tokenizer_type")}': pasa la carpeta de ese tokenizador")
+        nombre = buscar(cfg, "tokenizer_type")
+        print(f"usa el codec '{nombre}': pasa la carpeta de ese tokenizador")
     else:
         print("no lo se por esta configuracion: busca 'mel' o 'codebook' en la ficha del modelo")
 
