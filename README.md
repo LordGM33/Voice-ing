@@ -60,6 +60,10 @@ para que puedas probarlos igual.
 | `cap09_normalizacion.py` | 9 | Normaliza números, decimales, horas, dominios y etiquetas, y avisa de lo que no sabe decir (serie, ep. 51) | num2words |
 | `cap09_sintetizar.py` | 9 | Sintetiza con tu voz clonada: el adaptador (serie, ep. 52) | GPU y motor |
 | `cap09_perillas.py` | 9 | Una perilla del motor contra los valores de fábrica, por el reparto de varias tomas (serie, ep. 53) | GPU y motor |
+| `cap10_que_motor.py` | 10 | ¿Tu motor dibuja mel o escribe códigos? Y por cuántos bits por segundo pasa tu voz (serie, ep. 54 y 56) | solo stdlib |
+| `cap10_fase.py` | 10 | Del mel al sonido con Griffin-Lim: la entonación medible cae y la distancia espectral no lo ve (serie, ep. 55) | base |
+| `cap10_codec.py` | 10 | Ida y vuelta por el códec del motor, y cuánto tarda su vocoder (serie, ep. 56 y 57) | motor (GPU si la hay) |
+| `cap10_timbre.py` | 10 | Cambiar el timbre no cambia lo que se entiende; y cuándo se queda una conversión de voz (serie, ep. 58 a 60) | ASR |
 
 ## Instalación
 
