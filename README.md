@@ -64,6 +64,10 @@ para que puedas probarlos igual.
 | `cap10_fase.py` | 10 | Del mel al sonido con Griffin-Lim: la entonación medible cae y la distancia espectral no lo ve (serie, ep. 55) | base |
 | `cap10_codec.py` | 10 | Ida y vuelta por el códec del motor, y cuánto tarda su vocoder (serie, ep. 56 y 57) | motor (GPU si la hay) |
 | `cap10_timbre.py` | 10 | Cambiar el timbre no cambia lo que se entiende; y cuándo se queda una conversión de voz (serie, ep. 58 a 60) | ASR |
+| `cap11_reconocedor.py` | 11 | Cada palabra con su momento y las que duran cero; cuánto tarda por segundo de audio; y en qué idioma creyó oírte (serie, ep. 61 a 63) | ASR |
+| `cap11_parakeet.py` | 11 | Otro reconocedor más ligero, en trozos de 8 s, y aviso de los trozos que no escribió en español (serie, ep. 64) | torch y transformers 5 |
+| `cap11_referencia.py` | 11 | ¿Está entero el texto de tu referencia? Y la revisión a mano: solo las palabras en que no coincide con el reconocedor (serie, ep. 65 y 66) | ASR |
+| `cap11_mismo_reconocedor.py` | 11 | Varias versiones medidas con un solo reconocedor contra el mismo guion (serie, ep. 67) | ASR |
 
 ## Instalación
 
