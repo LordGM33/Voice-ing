@@ -68,6 +68,15 @@ para que puedas probarlos igual.
 | `cap11_parakeet.py` | 11 | Otro reconocedor más ligero, en trozos de 8 s, y aviso de los trozos que no escribió en español (serie, ep. 64) | torch y transformers 5 |
 | `cap11_referencia.py` | 11 | ¿Está entero el texto de tu referencia? Y la revisión a mano: solo las palabras en que no coincide con el reconocedor (serie, ep. 65 y 66) | ASR |
 | `cap11_mismo_reconocedor.py` | 11 | Varias versiones medidas con un solo reconocedor contra el mismo guion (serie, ep. 67) | ASR |
+| `cap12_donde_corre.py` | 12 | ¿Dónde quedaron los pesos y cuánta memoria ocupa el proceso? Cuánto tarda cada arranque, y la frase entera frente a su primer trozo (serie, ep. 68, 69 y 71) | motor y psutil |
+| `cap12_bits.py` | 12 | Dieciséis o treinta y dos bits, medido en tu máquina con varias tomas (serie, ep. 70) | motor |
+| `cap12_tomas.py` | 12 | La mejor de varias tomas, la más cercana a tu referencia; y cuántas tomas valen la pena (serie, ep. 72 y 73) | motor |
+| `cap12_cuello.py` | 12 | Dónde se va el tiempo de tu cadena: qué parte se lleva cada etapa y cuál es el cuello (serie, ep. 74) | solo stdlib |
+| `cap13_emocion.py` | 13 | La emoción en tres números: semitonos, palabras por segundo y variación de energía (serie, ep. 75) | base |
+| `cap13_estados.py` | 13 | Una referencia por estado: qué viaja de la referencia a la voz clonada y qué queda en el ruido (serie, ep. 76) | motor |
+| `cap13_tildes.py` | 13 | Detectar y rechazar el texto sin tildes que el motor leería mal (serie, ep. 77) | solo stdlib |
+| `cap13_conversar.py` | 13 | Cuándo suena la primera palabra: el párrafo entero, troceado en cláusulas y con una muletilla guardada (serie, ep. 78, 79 y 81) | motor |
+| `cap13_avatar.py` | 13 | El audio que recibe el avatar: frecuencia, canales, pico y silencio al principio y al final (serie, ep. 80) | base |
 
 ## Instalación
 
