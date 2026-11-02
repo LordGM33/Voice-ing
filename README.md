@@ -77,6 +77,12 @@ para que puedas probarlos igual.
 | `cap13_tildes.py` | 13 | Detectar y rechazar el texto sin tildes que el motor leería mal (serie, ep. 77) | solo stdlib |
 | `cap13_conversar.py` | 13 | Cuándo suena la primera palabra: el párrafo entero, troceado en cláusulas y con una muletilla guardada (serie, ep. 78, 79 y 81) | motor |
 | `cap13_avatar.py` | 13 | El audio que recibe el avatar: frecuencia, canales, pico y silencio al principio y al final (serie, ep. 80) | base |
+| `cap14_relevo.py` | 14 | ¿Llega a tiempo el relevo? La conversión por trozos como del micrófono, y cuánto tarda la primera llamada (serie, ep. 82) | base |
+| `cap14_tu_voz_no_se_publica.py` | 14 | Ningún audio en lo que vas a publicar, ni en toda la historia del repositorio (serie, ep. 83) | solo stdlib y git |
+| `cap14_permiso.py` | 14 | Un permiso con alcance: para qué, hasta cuándo y si se retiró, antes de sintetizar (serie, ep. 84) | solo stdlib |
+| `cap14_registro.py` | 14 | La huella de cada audio en un registro, y buscar si un audio salió de tu sistema (serie, ep. 85) | solo stdlib |
+| `cap14_filtro.py` | 14 | Filtro de salida por palabras enteras, cuántos textos buenos frena por error y la frase del personaje (serie, ep. 86 y 88) | solo stdlib |
+| `cap14_declarar.py` | 14 | Qué etiqueta de IA lleva dentro tu vídeo: generado entero o mezcla (serie, ep. 87) | solo stdlib |
 
 ## Instalación
 
