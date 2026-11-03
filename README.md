@@ -83,6 +83,8 @@ para que puedas probarlos igual.
 | `cap14_registro.py` | 14 | La huella de cada audio en un registro, y buscar si un audio salió de tu sistema (serie, ep. 85) | solo stdlib |
 | `cap14_filtro.py` | 14 | Filtro de salida por palabras enteras, cuántos textos buenos frena por error y la frase del personaje (serie, ep. 86 y 88) | solo stdlib |
 | `cap14_declarar.py` | 14 | Qué etiqueta de IA lleva dentro tu vídeo: generado entero o mezcla (serie, ep. 87) | solo stdlib |
+| `cap15_cabe.py` | 15 | ¿Cabe de verdad? La memoria de la caja frente a la libre, con margen para el escritorio (serie, ep. 90) | torch con CUDA |
+| `cap15_resultados.py` | 15 | La entonación de todas tus narraciones frente a tu referencia y tu umbral (serie, ep. 92) | base |
 
 ## Instalación
 
